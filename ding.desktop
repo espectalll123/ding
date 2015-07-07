@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=ding
+Exec=qmlscene $@ Main.qml
+Icon=ding.png
+Terminal=false
+Type=Application
+X-Ubuntu-Touch=true
+

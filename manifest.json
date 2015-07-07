@@ -1,0 +1,15 @@
+{
+    "name": "espectalll123.ding",
+    "description": "Ding dong!",
+    "architecture": "all",
+    "title": "Ding",
+    "hooks": {
+        "ding": {
+            "apparmor": "ding.apparmor",
+            "desktop": "ding.desktop"
+        }
+    },
+    "version": "0.1",
+    "maintainer": "Francisco Gómez <espectalll123@kydara.com>",
+    "framework": "ubuntu-sdk-15.04"
+}
