@@ -8,7 +8,7 @@ import Ubuntu.Components.ListItems 1.0 as ListItem
 MainView {
     objectName: "mainView"
 
-    applicationName: "espectalll123.ding"
+    applicationName: "ding.espectalll123"
 
     //automaticOrientation: true
 

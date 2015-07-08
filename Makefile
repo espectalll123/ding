@@ -20,7 +20,7 @@
 #################################################################
 
 #APP_ID needs to match the "name" field of the click manifest
-APP_ID=espectalll123.ding
+APP_ID=ding.espectalll123
 
 #provides a way for the IDE to set a specific target folder for the translations
 TRANSLATION_ROOT=.
