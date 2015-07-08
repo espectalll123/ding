@@ -20,13 +20,18 @@ MainView {
         url: "wss://ding-espectalll123.rhcloud.com:8443"
         onTextMessageReceived: {
             console.log("The socket said: " + message)
+            if (message == "Ding!") {
+                console.log("Got ding'd!");
+            }
+
         }
         onStatusChanged: if (ws.status == WebSocket.Error) {
-                             console.log("Error: " + ws.errorString)
+                             console.log("Error: " + ws.errorString);
                          } else if (ws.status == WebSocket.Open) {
-                             console.log("Connection established!")
+                             console.log("Connection established!");
+                             ws.sendTextMessage("phone +34316467118");
                          } else if (ws.status == WebSocket.Closed) {
-                             console.log("Closed connection")
+                             console.log("Closed connection");
                          }
         active: true
     }
@@ -53,18 +58,22 @@ MainView {
                             ListElement {
                                 name: "Francisco Gómez"
                                 picture: "graphics/Xerzvolution.png"
+                phone: "+34316467118"
                             }
                             ListElement {
                                 name: "初音ミク"
                                 picture: "graphics/Miku.png"
+				phone: "+81234567890"
                             }
                             ListElement {
                                 name: "Bugs Bunny"
                                 picture: "graphics/Bugs.png"
+				phone: "+16466795255"
                             }
                             ListElement {
                                 name: "KNUCKLE$"
                                 picture: "graphics/Knuckle$.png"
+				phone: "+$$$$$$$$$$$"
                             }
                         }
                         delegate: Grid {
@@ -78,7 +87,7 @@ MainView {
                                     anchors.fill: parent
                                     onDropped: {
                                         console.log("Sending...");
-                                        ws.sendTextMessage(name);
+                                        ws.sendTextMessage("ding " + phone);
                                     }
                                 }
                             }
